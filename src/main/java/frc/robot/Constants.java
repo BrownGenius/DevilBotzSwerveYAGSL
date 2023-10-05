@@ -4,6 +4,10 @@
 
 package frc.robot;
 
+import edu.wpi.first.math.geometry.Translation3d;
+import edu.wpi.first.math.util.Units;
+import swervelib.math.Matter;
+
 /**
  * The Constants class provides a convenient place for teams to hold robot-wide numerical or boolean
  * constants. This class should not be used for any other purpose. All constants should be declared
@@ -14,7 +18,7 @@ package frc.robot;
  */
 public final class Constants {
   // START: Setup AdvantageKit
-  public final class AdvantageKit {
+  public static final class AdvantageKit {
     /** Set to true if you want to replay an existing AdvantageKit log back as a simulation */
     static final boolean REPLAY_MODE = false;
   }
@@ -27,4 +31,10 @@ public final class Constants {
     public static final double LOOP_TIME = 0.13; // s, 20ms + 110ms sprk max velocity lag
   }
 
+  public static class OperatorConstants {
+
+    // Joystick Deadband
+    public static final double LEFT_X_DEADBAND = 0.01;
+    public static final double LEFT_Y_DEADBAND = 0.01;
+  }
 }
